@@ -19,9 +19,11 @@ pip3 install -r requirements.txt
 You'll need to sign up for an account on https://huggingface.co/ and get an access token.
 Make sure to get an access token key from https://huggingface.co/settings/tokens
 
-Create a ".env" file and put your access token in that file
+Create a ".env" file in the project root directory and add the following:
 ```bash
 HUGGINGFACEHUB_API_TOKEN = 'hf_XXXXXXXX'
+MODEL_NAME = 'gpt2-medium'
+PIPELINE_TASK = "text-generation"
 ```
 
 # Instructions:
