@@ -1,4 +1,4 @@
-# Hugging Face Transformers - Summarization
+# Hugging Face - Summarization
 
 This repository is a simple example of how to use the Hugging Face Hub to summarize text.
 
@@ -46,3 +46,15 @@ This will download the model and tokenizer to your local machine and run on your
 Supported tensors are 
 - PyTorch 
 - TensorFlow
+
+## Hugging Face Hub API
+https://huggingface.co/facebook/bart-large-cnn
+- modelId: facebook/bart-large-cnn
+- pipeline_tag: summarization
+- library_name: transformers
+- architectures: BartForConditionalGeneration
+- transformersInfo: auto_model: AutoModelForSeq2SeqLM
+- transformersInfo: pipeline_tag: text2text-generation
+- transformersInfo: processor: AutoTokenizer
+- task_specific_params:
+- - summarization - max_length: 142
