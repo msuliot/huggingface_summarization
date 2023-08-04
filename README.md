@@ -14,6 +14,7 @@ pip3 install -r requirements.txt
 
 ## Hugging Face Access Token
 
+You'll need to sign up for an account on https://huggingface.co/ and get an access token.
 Make sure to get an access token key from https://huggingface.co/settings/tokens
 
 Create a ".env" file and put your access token in that file
