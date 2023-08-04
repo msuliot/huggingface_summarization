@@ -38,7 +38,7 @@ python3 api.py
 python3 pipeline.py
 ```
 
-## 3. Run the tensorizer script
+## 3. Run the local script
 ```bash
 python3 local.py
 ```
