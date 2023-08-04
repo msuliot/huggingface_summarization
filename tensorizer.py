@@ -1,5 +1,9 @@
 import os
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, BartForConditionalGeneration
+from transformers import pipeline, AutoTokenizer
+from transformers import AutoModelForSeq2SeqLM, AutoModelForCausalLM, BartForConditionalGeneration 
+from transformers import TFAutoModelForSeq2SeqLM, TFAutoModelForCausalLM, TFBartForConditionalGeneration 
+
+
 from dotenv import load_dotenv
 load_dotenv()
 hf_api_key = os.getenv('HUGGINGFACEHUB_API_TOKEN')
@@ -13,8 +17,8 @@ def set_local_vars():
 
 
 def hf_tensorizer(model_name, pipeline_task, text):
-    tokenizer = AutoTokenizer.from_pretrained(model_name) 
-    model = BartForConditionalGeneration.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, return_tensors="pt") # return_tensors="pt" or "tf"
+    model = BartForConditionalGeneration.from_pretrained(model_name) # BartForConditionalGeneration or TFBartForConditionalGeneration
     pipe = pipeline(pipeline_task, model=model, tokenizer=tokenizer)
     output = pipe(text)
     return output

@@ -36,7 +36,10 @@ python3 api.py
 python3 pipeline.py
 ```
 
-## 3. Run the pipeline script
+## 3. Run the tensorizer script
 ```bash
 python3 tensorizer.py
 ```
+Supported tensors are 
+- PyTorch 
+- TensorFlow
