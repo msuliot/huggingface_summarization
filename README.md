@@ -2,6 +2,9 @@
 
 This repository is a simple example of how to use the Hugging Face Hub to summarize text.
 
+## YouTube Video Tutorial for this GitHub Repository
+[Hugging Face - Summarization](https://youtu.be/HLDTDIRFx8k)
+
 ## The basics
 
 1. Must have Python3.
